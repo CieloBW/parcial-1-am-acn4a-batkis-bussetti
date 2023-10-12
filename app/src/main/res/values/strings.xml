@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">play-companion</string>
+    <string name="pc_title">Play Companion</string>
+    <string name="pc_dice_title">Dice</string>
+    <string name="pc_wheel_title">Wheel</string>
+    <string name="pc_teams_title">Teams</string>
+    <string name="pc_coin_flip_title">Coin flip</string>
+    <string name="pc_scattergories_title">Scattergories</string>
+    <string name="pc_hourglass_title">Hourglass</string>
 </resources>
