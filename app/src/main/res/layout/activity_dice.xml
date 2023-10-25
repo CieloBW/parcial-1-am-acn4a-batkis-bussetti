@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D2C37"
+    tools:context=".DiceActivity">
+
+    <TextView
+        android:id="@+id/pc_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_black_italic"
+        android:text="@string/pc_dice_title"
+        android:textAllCaps="true"
+        android:textColor="@color/pc_white"
+        android:textSize="@dimen/pc_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pc_dice_number_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_black_italic"
+        android:text="1"
+        android:textAllCaps="true"
+        android:textColor="@color/pc_white"
+        android:textSize="92sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/pc_dice_img_1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/square" />
+
+    <Button
+        android:id="@+id/pc_roll_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/pc_white"
+        android:text="Roll"
+        android:textColor="@color/pc_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pc_dice_number_1"
+        tools:cornerRadius="@dimen/pc_radius" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pc_roll_button">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/pc_d4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="D4"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/pc_d6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="true"
+                android:padding="8dp"
+                android:text="D6"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/pc_d8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="D8"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/pc_d10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="D10"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/pc_d12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="D12"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+            <CheckBox
+                android:id="@+id/pc_d20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:checked="false"
+                android:padding="8dp"
+                android:text="D20"
+                android:textColor="@color/pc_white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
