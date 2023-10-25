@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2D2C37"
+    android:background="@color/pc_background"
     tools:context=".DiceActivity">
 
     <TextView
@@ -29,7 +29,7 @@
         android:text="@string/pc_dice_numbers"
         android:textAllCaps="true"
         android:textColor="@color/pc_white"
-        android:textSize="92sp"
+        android:textSize="@dimen/pc_dice_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -86,7 +86,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d4"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
             <CheckBox
                 android:id="@+id/pc_d6"
@@ -98,7 +98,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d6"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
             <CheckBox
                 android:id="@+id/pc_d8"
@@ -110,7 +110,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d8"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
             <CheckBox
                 android:id="@+id/pc_d10"
@@ -122,7 +122,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d10"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
             <CheckBox
                 android:id="@+id/pc_d12"
@@ -134,7 +134,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d12"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
             <CheckBox
                 android:id="@+id/pc_d20"
@@ -146,7 +146,7 @@
                 android:padding="8dp"
                 android:text="@string/pc_checkbox_d20"
                 android:textColor="@color/pc_white"
-                android:textSize="16sp" />
+                android:textSize="@dimen/pc_text_size" />
 
         </LinearLayout>
     </HorizontalScrollView>
