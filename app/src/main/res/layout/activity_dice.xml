@@ -26,7 +26,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black_italic"
-        android:text="1"
+        android:text="@string/pc_dice_numbers"
         android:textAllCaps="true"
         android:textColor="@color/pc_white"
         android:textSize="92sp"
@@ -40,6 +40,7 @@
         android:id="@+id/pc_dice_img_1"
         android:layout_width="200dp"
         android:layout_height="200dp"
+        android:contentDescription="@string/pc_dice_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:backgroundTint="@color/pc_white"
-        android:text="Roll"
+        android:text="@string/pc_btn_roll"
         android:textColor="@color/pc_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +84,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="false"
                 android:padding="8dp"
-                android:text="D4"
+                android:text="@string/pc_checkbox_d4"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
@@ -95,7 +96,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="true"
                 android:padding="8dp"
-                android:text="D6"
+                android:text="@string/pc_checkbox_d6"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
@@ -107,7 +108,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="false"
                 android:padding="8dp"
-                android:text="D8"
+                android:text="@string/pc_checkbox_d8"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
@@ -119,7 +120,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="false"
                 android:padding="8dp"
-                android:text="D10"
+                android:text="@string/pc_checkbox_d10"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
@@ -131,7 +132,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="false"
                 android:padding="8dp"
-                android:text="D12"
+                android:text="@string/pc_checkbox_d12"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
@@ -143,7 +144,7 @@
                 android:layout_marginEnd="8dp"
                 android:checked="false"
                 android:padding="8dp"
-                android:text="D20"
+                android:text="@string/pc_checkbox_d20"
                 android:textColor="@color/pc_white"
                 android:textSize="16sp" />
 
