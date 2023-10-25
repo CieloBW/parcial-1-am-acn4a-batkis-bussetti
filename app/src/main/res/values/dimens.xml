@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pc_title_size">32sp</dimen>
+    <dimen name="pc_text_size">16sp</dimen>
+    <dimen name="pc_dice_size">92sp</dimen>
+    <dimen name="pc_radius">12dp</dimen>
+</resources>
