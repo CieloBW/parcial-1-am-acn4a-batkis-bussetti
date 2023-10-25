@@ -16,4 +16,10 @@
     <string name="pc_checkbox_d20">D20</string>
     <string name="pc_dice_numbers">1</string>
     <string name="pc_dice_image">dice_image</string>
+    <string name="pc_image_dice">image dice</string>
+    <string name="pc_image_wheel">image wheel</string>
+    <string name="pc_image_teams">image teams</string>
+    <string name="pc_image_coin_flip">image coin flip</string>
+    <string name="pc_image_scattergories">image scattergories</string>
+    <string name="pc_image_hourglass">image hourglass</string>
 </resources>
