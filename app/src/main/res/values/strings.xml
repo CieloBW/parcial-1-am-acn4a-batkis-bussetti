@@ -22,4 +22,13 @@
     <string name="pc_image_coin_flip">image coin flip</string>
     <string name="pc_image_scattergories">image scattergories</string>
     <string name="pc_image_hourglass">image hourglass</string>
+    <string name="pc_submit">Submit</string>
+    <string name="pc_login">Login</string>
+    <string name="pc_register">Register</string>
+    <string name="pc_email">Email</string>
+    <string name="pc_password">Password</string>
+    <string name="pc_text_go_register">You don\'t have an account?</string>
+    <string name="pc_register_here">Register here</string>
+    <string name="pc_text_go_login">You have an account?</string>
+    <string name="pc_login_here">Login here</string>
 </resources>

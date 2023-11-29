@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pc_background"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/pc_title3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_black_italic"
+        android:text="@string/pc_login"
+        android:textAllCaps="true"
+        android:textColor="@color/pc_white"
+        android:textSize="@dimen/pc_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@+id/pc_title3"
+        tools:layout_editor_absoluteX="1dp">
+
+        <TextView
+            android:id="@+id/pc_label_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pc_email"
+            android:textColor="@color/pc_white"
+            android:textSize="@dimen/pc_text_size"
+            app:layout_constraintStart_toStartOf="@+id/editTextTextEmail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextTextEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/pc_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pc_label_mail" />
+
+        <TextView
+            android:id="@+id/pc_label_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/pc_password"
+            android:textColor="@color/pc_white"
+            android:textSize="@dimen/pc_text_size"
+            app:layout_constraintStart_toStartOf="@id/editTextTextPassword"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextEmail" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="textPassword"
+            android:textColor="@color/pc_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pc_label_pass" />
+
+        <Button
+            android:id="@+id/pc_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/pc_white"
+            android:onClick="submitForm"
+            android:text="@string/pc_submit"
+            android:textColor="@color/pc_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+            tools:cornerRadius="@dimen/pc_radius" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/pc_submit_button">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/pc_text_go_register"
+                android:textAlignment="textEnd"
+                android:textColor="@color/pc_white"
+                tools:textSize="12sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/pc_transparent"
+                android:onClick="openRegisterActivity"
+                android:text="@string/pc_register_here"
+                android:textAlignment="textStart" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
