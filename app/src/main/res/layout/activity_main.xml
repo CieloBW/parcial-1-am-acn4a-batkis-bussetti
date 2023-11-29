@@ -176,4 +176,16 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/pc_transparent"
+        android:onClick="submitLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_close_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

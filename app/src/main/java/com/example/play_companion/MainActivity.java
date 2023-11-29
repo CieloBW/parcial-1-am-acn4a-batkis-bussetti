@@ -35,4 +35,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DiceActivity.class);
         startActivity(intent);
     }
+
+    public void submitLogout(View v) {
+        mAuth.signOut();
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
+    }
 }
