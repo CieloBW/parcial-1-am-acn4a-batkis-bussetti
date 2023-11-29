@@ -22,6 +22,9 @@
     <string name="pc_image_coin_flip">image coin flip</string>
     <string name="pc_image_scattergories">image scattergories</string>
     <string name="pc_image_hourglass">image hourglass</string>
-    <string name="pc_sign_in_or_register">Sign in or register</string>
-    <string name="pc_account">Account</string>
+    <string name="pc_submit">Submit</string>
+    <string name="pc_login">Login</string>
+    <string name="pc_register">Register</string>
+    <string name="pc_email">Email</string>
+    <string name="pc_password">Password</string>
 </resources>
