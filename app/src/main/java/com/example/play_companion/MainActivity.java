@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DiceActivity.class);
         startActivity(intent);
     }
+
+    public void openPromptsActivity(View view) {
+        Intent intent = new Intent(this, PromptsActivity.class);
+        startActivity(intent);
+    }
 }

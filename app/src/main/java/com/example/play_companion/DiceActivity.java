@@ -3,6 +3,7 @@ package com.example.play_companion;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.Log;
@@ -167,5 +168,10 @@ public class DiceActivity extends AppCompatActivity {
 
         Log.d("TAG", String.valueOf(params.bottomMargin / density));
 
+    }
+
+    public void returnMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
