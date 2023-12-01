@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/pc_dice_number_1"
+        android:id="@+id/pc_prompt_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black_italic"
@@ -47,7 +47,7 @@
         android:textColor="@color/pc_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pc_dice_number_1"
+        app:layout_constraintTop_toBottomOf="@+id/pc_prompt_text"
         tools:cornerRadius="@dimen/pc_radius" />
 
     <ImageButton
