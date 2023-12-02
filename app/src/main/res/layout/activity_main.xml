@@ -26,6 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pc_title">
 
         <ImageView
@@ -76,36 +78,35 @@
             app:layout_constraintTop_toBottomOf="@id/pc_btn_wheel" />
 
         <ImageView
-            android:id="@+id/pc_btn_teams"
+            android:id="@+id/pc_btn_prompts"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginEnd="24dp"
-            android:alpha="0.6"
             android:contentDescription="@string/pc_image_teams"
+            android:onClick="openPromptsActivity"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/teams" />
+            app:srcCompat="@drawable/prompts" />
 
         <TextView
-            android:id="@+id/pc_btn_text_teams"
+            android:id="@+id/pc_btn_text_prompts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:alpha="0.6"
-            android:text="@string/pc_teams_title"
+            android:text="@string/pc_prompts_title"
             android:textColor="@color/pc_white"
             android:textSize="@dimen/pc_text_size"
-            app:layout_constraintEnd_toEndOf="@id/pc_btn_teams"
-            app:layout_constraintStart_toStartOf="@id/pc_btn_teams"
-            app:layout_constraintTop_toBottomOf="@id/pc_btn_teams" />
+            app:layout_constraintEnd_toEndOf="@id/pc_btn_prompts"
+            app:layout_constraintStart_toStartOf="@id/pc_btn_prompts"
+            app:layout_constraintTop_toBottomOf="@id/pc_btn_prompts" />
 
         <ImageView
             android:id="@+id/pc_btn_coin_flip"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginStart="24dp"
-            android:alpha="0.6"
             android:layout_marginTop="80dp"
+            android:alpha="0.6"
             android:contentDescription="@string/pc_image_coin_flip"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pc_btn_dice"
@@ -154,11 +155,11 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginTop="80dp"
-            android:alpha="0.6"
             android:layout_marginEnd="24dp"
+            android:alpha="0.6"
             android:contentDescription="@string/pc_image_hourglass"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pc_btn_teams"
+            app:layout_constraintTop_toBottomOf="@+id/pc_btn_prompts"
             app:srcCompat="@drawable/hourglass" />
 
         <TextView
@@ -175,5 +176,17 @@
             app:layout_constraintTop_toBottomOf="@id/pc_btn_hourglass" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/pc_transparent"
+        android:onClick="submitLogout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_close_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
