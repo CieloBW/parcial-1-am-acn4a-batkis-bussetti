@@ -61,7 +61,9 @@ public class DiceActivity extends AppCompatActivity {
 
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
-            public void onClick(View v) {changeDiceType(v);}
+            public void onClick(View v) {
+                changeDiceType(v);
+            }
         };
 
         d4Button.setOnClickListener(onClickListener);

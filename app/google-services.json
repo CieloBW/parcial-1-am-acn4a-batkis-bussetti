@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "468031960137",
+    "project_id": "play-companion",
+    "storage_bucket": "play-companion.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:468031960137:android:393392f27bd5af2674bb98",
+        "android_client_info": {
+          "package_name": "com.example.play_companion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfybARBUCi-2ZuPOcnq39okoo6lxArDZc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
