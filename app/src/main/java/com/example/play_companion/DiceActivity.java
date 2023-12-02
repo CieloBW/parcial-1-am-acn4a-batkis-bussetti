@@ -3,9 +3,8 @@ package com.example.play_companion;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
-import android.content.res.ColorStateList;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,7 +59,6 @@ public class DiceActivity extends AppCompatActivity {
             }
         });
 
-        Log.d("TAG", "1");
         View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,8 +93,6 @@ public class DiceActivity extends AppCompatActivity {
 
     @SuppressLint("ResourceAsColor")
     private void changeDiceType(View view) {
-        Log.d("TAG", String.valueOf(view.getId()));
-        Log.d("TAG", String.valueOf(d4Button.getId()));
 
         int id = view.getId();
         int d4Id = d4Button.getId();
@@ -165,9 +161,10 @@ public class DiceActivity extends AppCompatActivity {
                 diceImg.setLayoutParams(params);
             }
         }, 500);
+    }
 
-
-        Log.d("TAG", String.valueOf(params.bottomMargin / density));
-
+    public void returnMain(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
