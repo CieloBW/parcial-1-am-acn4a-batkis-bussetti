@@ -1,33 +1,42 @@
 package com.example.play_companion;
 
-import android.content.Intent;
 import android.os.AsyncTask;
-import android.util.Log;
-
+import org.json.JSONException;
+import org.json.JSONObject;
 import java.io.IOException;
-
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 public class GetPrompts extends AsyncTask<String, Integer, String> {
 
+    public interface AsyncResponse {
+        void processFinish(String result);
+    }
+
+    public AsyncResponse delegate = null;
+
     @Override
     protected String doInBackground(String... strings) {
         String url = strings[0];
-        String response = "";
+        String response;
+        String prompt = "";
         try {
             response = run(url);
-        } catch (IOException e) {
+            JSONObject promptJson = new JSONObject(response);
+            prompt = (String) promptJson.get("randomValue");
+        } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
         }
-        return response;
+        return prompt;
     }
 
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        Log.i("probando_url", s);
+        if (delegate != null) {
+            delegate.processFinish(s);
+        }
     }
 
     OkHttpClient client = new OkHttpClient();

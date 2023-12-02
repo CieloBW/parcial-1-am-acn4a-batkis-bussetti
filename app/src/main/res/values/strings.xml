@@ -22,4 +22,7 @@
     <string name="pc_image_coin_flip">image coin flip</string>
     <string name="pc_image_scattergories">image scattergories</string>
     <string name="pc_image_hourglass">image hourglass</string>
+    <string name="pc_question">\?</string>
+    <string name="pc_btn_prompt">Get prompt</string>
+    <string name="pc_return">return</string>
 </resources>

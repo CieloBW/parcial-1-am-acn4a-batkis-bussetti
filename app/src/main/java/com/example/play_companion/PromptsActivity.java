@@ -3,11 +3,9 @@ package com.example.play_companion;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.ConnectivityManager;
-import android.net.Network;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -17,7 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.view.ViewGroup;
 
-public class PromptsActivity extends AppCompatActivity {
+public class PromptsActivity extends AppCompatActivity implements GetPrompts.AsyncResponse {
 
     Button rollButton;
     Spinner pcSpinner;
@@ -41,8 +39,7 @@ public class PromptsActivity extends AppCompatActivity {
             public View getView(int position, View convertView, ViewGroup parent) {
                 View view = super.getView(position, convertView, parent);
                 TextView text = (TextView) view.findViewById(android.R.id.text1);
-                // Change the text color here
-                text.setTextColor(getResources().getColor(R.color.pc_white)); // Replace with your desired text color
+                text.setTextColor(getResources().getColor(R.color.pc_white));
                 return view;
             }
         };
@@ -63,31 +60,31 @@ public class PromptsActivity extends AppCompatActivity {
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
-        if (networkInfo != null && networkInfo.isConnected()) {
-            Log.d("TAG", "Has internet");
-        } else {
-            Log.d("TAG", "No internet");
+        if (networkInfo == null || !networkInfo.isConnected()) {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         }
     }
 
     private void getPrompt(String cat) {
+        int diceSize = getResources().getDimensionPixelSize(R.dimen.pc_dice_size);
+        promptText.setTextSize(TypedValue.COMPLEX_UNIT_PX, diceSize);
+        promptText.setText(R.string.pc_question);
+
         GetPrompts getPrompts = new GetPrompts();
+        getPrompts.delegate = this;
         getPrompts.execute("https://playcompanion.juanbatkis.repl.co/get-prompt?cat=" + cat);
 
-        //int i = random.nextInt(diceSelected)+1;
-
-        Animation rotate = AnimationUtils.loadAnimation(this, R.anim.pc_rotate);
-
+        Animation rotate = AnimationUtils.loadAnimation(this, R.anim.pc_rotate_infinite);
         promptText.startAnimation(rotate);
+    }
 
-        /*new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                diceNumber.setText(String.valueOf(i));
-            }
-        }, 500);*/
+    @Override
+    public void processFinish(String result) {
+        int titleSize = getResources().getDimensionPixelSize(R.dimen.pc_title_size);
+        promptText.setTextSize(TypedValue.COMPLEX_UNIT_PX, titleSize);
+        promptText.setText(result);
+        promptText.clearAnimation();
     }
 
     public void returnMain(View view) {
