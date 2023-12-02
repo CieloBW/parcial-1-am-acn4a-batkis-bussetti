@@ -7,11 +7,11 @@ From replacing your missing dice to helping you pick your teams. We've got it�
 [Wireframes](https://www.figma.com/file/KuLNlDMBWnfN0vIGltnggH/Play-Companion-Wireframe)  
 [Firebase](https://console.firebase.google.com/u/1/project/play-companion/overview?hl=es)
 
+**Test user**:
+
+User = `user1@gmail.com`  
+Pass = `pass-user1`  
+
 **Team members**:
 * Batkis Juan
 * Bussetti Cielo
-
-**Test user**: 
-
-User = `user1@gmail.com`  
-Pass = `pass-user1`
