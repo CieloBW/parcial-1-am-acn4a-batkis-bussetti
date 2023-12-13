@@ -6,4 +6,5 @@
     <color name="pc_white">#F3F3F3</color>
     <color name="pc_black">#272727</color>
     <color name="pc_transparent">#00000000</color>
+    <color name="pc_red">#FF4D4D</color>
 </resources>

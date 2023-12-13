@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pc_background"
+    tools:context=".DiceActivity">
+
+    <TextView
+        android:id="@+id/pc_title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_black_italic"
+        android:text="@string/pc_account_title"
+        android:textAllCaps="true"
+        android:textColor="@color/pc_white"
+        android:textSize="@dimen/pc_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="180dp"
+        app:layout_constraintTop_toBottomOf="@+id/pc_title2"
+        tools:layout_editor_absoluteX="1dp">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pc_label_mail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pc_email"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/pc_white" />
+
+                <TextView
+                    android:id="@+id/pc_label_fname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/pc_fname"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextFName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="text"
+                    android:textColor="@color/pc_white" />
+
+                <TextView
+                    android:id="@+id/pc_label_lname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/pc_lname"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextLName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="text"
+                    android:textColor="@color/pc_white" />
+
+                <TextView
+                    android:id="@+id/pc_label_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/pc_password"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="textPassword"
+                    android:textColor="@color/pc_white" />
+
+                <TextView
+                    android:id="@+id/pc_label_n_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/pc_npassword"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextNPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="textPassword"
+                    android:textColor="@color/pc_white" />
+
+                <TextView
+                    android:id="@+id/pc_label_c_pass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/pc_cpassword"
+                    android:textColor="@color/pc_white"
+                    android:textSize="@dimen/pc_text_size" />
+
+                <EditText
+                    android:id="@+id/editTextTextCPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="12"
+                    android:inputType="textPassword"
+                    android:textColor="@color/pc_white" />
+
+                <Button
+                    android:id="@+id/pc_submit_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/pc_white"
+                    android:onClick="submitForm"
+                    android:text="@string/pc_save_changes"
+                    android:textColor="@color/pc_black"
+                    tools:cornerRadius="@dimen/pc_radius" />
+
+                <Button
+                    android:id="@+id/pc_close_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginEnd="20dp"
+                    android:backgroundTint="@color/pc_black"
+                    android:onClick="submitLogout"
+                    android:text="@string/pc_log_out"
+                    android:textColor="@color/pc_white"
+                    tools:cornerRadius="@dimen/pc_radius"
+                    tools:onClick="returnMain" />
+
+                <Button
+                    android:id="@+id/pc_delete_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="32dp"
+                    android:backgroundTint="@color/pc_red"
+                    android:onClick="submitForm"
+                    android:text="@string/pc_delete_account"
+                    android:textColor="@color/pc_white"
+                    tools:cornerRadius="@dimen/pc_radius" />
+
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pc_transparent"
+        android:onClick="returnMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_ios_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
