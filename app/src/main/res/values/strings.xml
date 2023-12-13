@@ -34,4 +34,12 @@
     <string name="pc_register_here">Register here</string>
     <string name="pc_text_go_login">You have an account?</string>
     <string name="pc_login_here">Login here</string>
+    <string name="pc_account_title">Account</string>
+    <string name="pc_fname">First name</string>
+    <string name="pc_lname">Last name</string>
+    <string name="pc_npassword">New Password</string>
+    <string name="pc_cpassword">Confirm Password</string>
+    <string name="pc_save_changes">Save changes</string>
+    <string name="pc_log_out">Log out</string>
+    <string name="pc_delete_account">Delete account</string>
 </resources>

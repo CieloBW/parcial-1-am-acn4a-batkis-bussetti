@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/roboto_black_italic"
-        android:text="Account"
+        android:text="@string/pc_account_title"
         android:textAllCaps="true"
         android:textColor="@color/pc_white"
         android:textSize="@dimen/pc_title_size"
@@ -63,7 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="First name"
+                    android:text="@string/pc_fname"
                     android:textColor="@color/pc_white"
                     android:textSize="@dimen/pc_text_size" />
 
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="Last name"
+                    android:text="@string/pc_lname"
                     android:textColor="@color/pc_white"
                     android:textSize="@dimen/pc_text_size" />
 
@@ -114,7 +114,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="New Password"
+                    android:text="@string/pc_npassword"
                     android:textColor="@color/pc_white"
                     android:textSize="@dimen/pc_text_size" />
 
@@ -131,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:text="Confirm Password"
+                    android:text="@string/pc_cpassword"
                     android:textColor="@color/pc_white"
                     android:textSize="@dimen/pc_text_size" />
 
@@ -152,7 +152,7 @@
                     android:layout_marginEnd="20dp"
                     android:backgroundTint="@color/pc_white"
                     android:onClick="submitForm"
-                    android:text="Save changes"
+                    android:text="@string/pc_save_changes"
                     android:textColor="@color/pc_black"
                     tools:cornerRadius="@dimen/pc_radius" />
 
@@ -164,10 +164,11 @@
                     android:layout_marginTop="56dp"
                     android:layout_marginEnd="20dp"
                     android:backgroundTint="@color/pc_black"
-                    android:onClick="submitForm"
-                    android:text="Log out"
+                    android:onClick="submitLogout"
+                    android:text="@string/pc_log_out"
                     android:textColor="@color/pc_white"
-                    tools:cornerRadius="@dimen/pc_radius" />
+                    tools:cornerRadius="@dimen/pc_radius"
+                    tools:onClick="returnMain" />
 
                 <Button
                     android:id="@+id/pc_delete_button"
@@ -177,9 +178,9 @@
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="20dp"
                     android:layout_marginBottom="32dp"
-                    android:backgroundTint="#FF4D4D"
+                    android:backgroundTint="@color/pc_red"
                     android:onClick="submitForm"
-                    android:text="Delete account"
+                    android:text="@string/pc_delete_account"
                     android:textColor="@color/pc_white"
                     tools:cornerRadius="@dimen/pc_radius" />
 
