@@ -52,8 +52,6 @@ public class CoinActivity extends AppCompatActivity {
     }
 
     private void flipCoin() {
-        Log.d("TAG", String.valueOf(spins));
-        Log.d("TAG", String.valueOf(heads));
         coinText.setText(R.string.pc_question);
         flipButton.setEnabled(false);
         flipButton.setAlpha(0.6F);
@@ -63,16 +61,12 @@ public class CoinActivity extends AppCompatActivity {
 
         if (heads) {
             heads = false;
-            Log.d("TAG", "start");
-            Log.d("TAG", String.valueOf(heads));
             anim.setTarget(coinImg);
             animR.setTarget(coinTImg);
             anim.start();
             animR.start();
         } else {
             heads = true;
-            Log.d("TAG", "start");
-            Log.d("TAG", String.valueOf(heads));
             anim.setTarget(coinTImg);
             animR.setTarget(coinImg);
             anim.start();
@@ -81,11 +75,9 @@ public class CoinActivity extends AppCompatActivity {
 
         spins--;
         if (spins > 0) {
-            Log.d("TAG", "inIf");
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Log.d("TAG", "flip again");
                     flipCoin();
                 }
             }, 810);
