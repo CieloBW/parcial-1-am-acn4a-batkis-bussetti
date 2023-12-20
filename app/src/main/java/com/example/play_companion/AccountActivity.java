@@ -81,12 +81,6 @@ public class AccountActivity extends AppCompatActivity {
                 });
     }
 
-    public void submitLogout(View v) {
-        mAuth.signOut();
-        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-        startActivity(intent);
-    }
-
     public void submitEditForm(View v) {
         String newFirstName = firstName.getText().toString();
         String newLastName = lastName.getText().toString();
@@ -114,18 +108,19 @@ public class AccountActivity extends AppCompatActivity {
                                                 @Override
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
-                                                        currentUser.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                            @Override
-                                                            public void onComplete(@NonNull Task<Void> task) {
-                                                                if (task.isSuccessful()) {
-                                                                    Toast.makeText(AccountActivity.this, "Fields updated successfully",
-                                                                            Toast.LENGTH_SHORT).show();
-                                                                } else {
-                                                                    Toast.makeText(AccountActivity.this, "Error password not updated",
-                                                                            Toast.LENGTH_SHORT).show();
-                                                                }
-                                                            }
-                                                        });
+                                                        currentUser.updatePassword(newPassword)
+                                                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<Void> task) {
+                                                                        if (task.isSuccessful()) {
+                                                                            Toast.makeText(AccountActivity.this, "Fields updated successfully",
+                                                                                    Toast.LENGTH_SHORT).show();
+                                                                        } else {
+                                                                            Toast.makeText(AccountActivity.this, "Error password not updated",
+                                                                                    Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    }
+                                                                });
                                                     } else {
                                                         Toast.makeText(AccountActivity.this, "Incorrect password",
                                                                 Toast.LENGTH_SHORT).show();
@@ -162,19 +157,33 @@ public class AccountActivity extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        Toast.makeText(AccountActivity.this, "User deleted successfully",
-                                Toast.LENGTH_SHORT).show();
-                        mAuth.signOut();
-                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                        startActivity(intent);
+                        currentUser.delete()
+                                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task) {
+                                        if (task.isSuccessful()) {
+                                            Toast.makeText(AccountActivity.this, "User deleted successfully",
+                                                    Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(AccountActivity.this, "Delete failed",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+                                });
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(AccountActivity.this, "Delete failed",
+                        Toast.makeText(AccountActivity.this, "Delete db user failed",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    public void submitLogout(View v) {
+        mAuth.signOut();
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        startActivity(intent);
     }
 }
