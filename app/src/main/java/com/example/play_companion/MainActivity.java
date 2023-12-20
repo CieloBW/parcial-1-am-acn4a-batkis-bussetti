@@ -60,6 +60,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void openCoinActivity(View view) {
+        Intent intent = new Intent(this, CoinActivity.class);
+        startActivity(intent);
+    }
+
     public void openAccountActivity(View view) {
         Intent intent = new Intent(this, AccountActivity.class);
         startActivity(intent);

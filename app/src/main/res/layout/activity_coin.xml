@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pc_background"
+    tools:context=".DiceActivity">
+
+    <TextView
+        android:id="@+id/pc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/roboto_black_italic"
+        android:text="@string/pc_coin_flip_title"
+        android:textAllCaps="true"
+        android:textColor="@color/pc_white"
+        android:textSize="@dimen/pc_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/pc_coin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/pc_heads"
+        android:textColor="@color/pc_white"
+        android:textSize="@dimen/pc_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/pc_coin_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/pc_coin_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/pc_coin_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin_heads" />
+
+    <ImageView
+        android:id="@+id/pc_coint_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/pc_coin_image"
+        android:scaleX="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/coin_tails" />
+
+    <Button
+        android:id="@+id/pc_flip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/pc_white"
+        android:text="@string/pc_flip"
+        android:textColor="@color/pc_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pc_coin_img"
+        tools:cornerRadius="@dimen/pc_radius" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/pc_transparent"
+        android:onClick="returnMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_ios_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,8 +106,8 @@
             android:layout_height="100dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="80dp"
-            android:alpha="0.6"
             android:contentDescription="@string/pc_image_coin_flip"
+            android:onClick="openCoinActivity"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pc_btn_dice"
             app:srcCompat="@drawable/coin" />
@@ -117,7 +117,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:alpha="0.6"
             android:text="@string/pc_coin_flip_title"
             android:textColor="@color/pc_white"
             android:textSize="@dimen/pc_text_size"

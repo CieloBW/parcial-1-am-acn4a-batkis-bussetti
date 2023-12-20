@@ -42,4 +42,8 @@
     <string name="pc_save_changes">Save changes</string>
     <string name="pc_log_out">Log out</string>
     <string name="pc_delete_account">Delete account</string>
+    <string name="pc_heads">Heads</string>
+    <string name="pc_tails">Tails</string>
+    <string name="pc_coin_image">coin_image</string>
+    <string name="pc_flip">Flip</string>
 </resources>
