@@ -87,7 +87,7 @@ public class AccountActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void submitForm(View v) {
+    public void submitEditForm(View v) {
         String newFirstName = firstName.getText().toString();
         String newLastName = lastName.getText().toString();
         String oldPassword = password.getText().toString();
@@ -150,6 +150,29 @@ public class AccountActivity extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(AccountActivity.this, "Update failed",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    public void submitDeleteForm(View v) {
+        db.collection("users")
+                .document(user.getDocId())
+                .delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(AccountActivity.this, "User deleted successfully",
+                                Toast.LENGTH_SHORT).show();
+                        mAuth.signOut();
+                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(AccountActivity.this, "Delete failed",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
