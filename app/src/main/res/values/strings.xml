@@ -51,4 +51,5 @@
     <string name="pc_start">Start</string>
     <string name="pc_ten">10</string>
     <string name="pc_seconds">Seconds</string>
+    <string name="pc_profile">profile</string>
 </resources>
