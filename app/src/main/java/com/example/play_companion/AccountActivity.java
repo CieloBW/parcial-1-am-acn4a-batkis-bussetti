@@ -164,6 +164,9 @@ public class AccountActivity extends AppCompatActivity {
                                         if (task.isSuccessful()) {
                                             Toast.makeText(AccountActivity.this, "User deleted successfully",
                                                     Toast.LENGTH_SHORT).show();
+                                            mAuth.signOut();
+                                            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                            startActivity(intent);
                                         } else {
                                             Toast.makeText(AccountActivity.this, "Delete failed",
                                                     Toast.LENGTH_SHORT).show();
