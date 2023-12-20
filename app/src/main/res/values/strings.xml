@@ -34,4 +34,22 @@
     <string name="pc_register_here">Register here</string>
     <string name="pc_text_go_login">You have an account?</string>
     <string name="pc_login_here">Login here</string>
+    <string name="pc_account_title">Account</string>
+    <string name="pc_fname">First name</string>
+    <string name="pc_lname">Last name</string>
+    <string name="pc_npassword">New Password</string>
+    <string name="pc_cpassword">Confirm Password</string>
+    <string name="pc_save_changes">Save changes</string>
+    <string name="pc_log_out">Log out</string>
+    <string name="pc_delete_account">Delete account</string>
+    <string name="pc_heads">Heads</string>
+    <string name="pc_tails">Tails</string>
+    <string name="pc_coin_image">coin_image</string>
+    <string name="pc_flip">Flip</string>
+    <string name="pc_zero_s">0s</string>
+    <string name="pc_hourglass_image">hourglass_image</string>
+    <string name="pc_start">Start</string>
+    <string name="pc_ten">10</string>
+    <string name="pc_seconds">Seconds</string>
+    <string name="pc_profile">profile</string>
 </resources>

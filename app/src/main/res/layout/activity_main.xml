@@ -23,20 +23,29 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pc_title">
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
             android:id="@+id/pc_btn_dice"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="24dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:contentDescription="@string/pc_image_dice"
             android:onClick="openDiceActivity"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/dice" />
@@ -54,37 +63,13 @@
             app:layout_constraintTop_toBottomOf="@id/pc_btn_dice" />
 
         <ImageView
-            android:id="@+id/pc_btn_wheel"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:alpha="0.6"
-            android:contentDescription="@string/pc_image_wheel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/wheel" />
-
-        <TextView
-            android:id="@+id/pc_btn_text_wheel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:alpha="0.6"
-            android:text="@string/pc_wheel_title"
-            android:textColor="@color/pc_white"
-            android:textSize="@dimen/pc_text_size"
-            app:layout_constraintEnd_toEndOf="@id/pc_btn_wheel"
-            app:layout_constraintStart_toStartOf="@id/pc_btn_wheel"
-            app:layout_constraintTop_toBottomOf="@id/pc_btn_wheel" />
-
-        <ImageView
             android:id="@+id/pc_btn_prompts"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginEnd="24dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:contentDescription="@string/pc_image_teams"
             android:onClick="openPromptsActivity"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/prompts" />
 
@@ -102,12 +87,12 @@
 
         <ImageView
             android:id="@+id/pc_btn_coin_flip"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="24dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginTop="80dp"
-            android:alpha="0.6"
             android:contentDescription="@string/pc_image_coin_flip"
+            android:onClick="openCoinActivity"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/pc_btn_dice"
             app:srcCompat="@drawable/coin" />
@@ -117,7 +102,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:alpha="0.6"
             android:text="@string/pc_coin_flip_title"
             android:textColor="@color/pc_white"
             android:textSize="@dimen/pc_text_size"
@@ -126,39 +110,14 @@
             app:layout_constraintTop_toBottomOf="@id/pc_btn_coin_flip" />
 
         <ImageView
-            android:id="@+id/pc_btn_scattergories"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="80dp"
-            android:alpha="0.6"
-            android:contentDescription="@string/pc_image_scattergories"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pc_btn_wheel"
-            app:srcCompat="@drawable/scattergories" />
-
-        <TextView
-            android:id="@+id/pc_btn_text_scattergories"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:alpha="0.6"
-            android:text="@string/pc_scattergories_title"
-            android:textColor="@color/pc_white"
-            android:textSize="@dimen/pc_text_size"
-            app:layout_constraintEnd_toEndOf="@id/pc_btn_scattergories"
-            app:layout_constraintStart_toStartOf="@id/pc_btn_scattergories"
-            app:layout_constraintTop_toBottomOf="@id/pc_btn_scattergories" />
-
-        <ImageView
             android:id="@+id/pc_btn_hourglass"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_marginTop="80dp"
-            android:layout_marginEnd="24dp"
-            android:alpha="0.6"
             android:contentDescription="@string/pc_image_hourglass"
+            android:onClick="openHourglassActivity"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/pc_btn_prompts"
             app:srcCompat="@drawable/hourglass" />
 
@@ -167,7 +126,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:alpha="0.6"
             android:text="@string/pc_hourglass_title"
             android:textColor="@color/pc_white"
             android:textSize="@dimen/pc_text_size"
@@ -184,9 +142,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/pc_transparent"
-        android:onClick="submitLogout"
+        android:contentDescription="@string/pc_profile"
+        android:onClick="openAccountActivity"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/round_close_24" />
+        app:srcCompat="@drawable/round_account_circle_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
