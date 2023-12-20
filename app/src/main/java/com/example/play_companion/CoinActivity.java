@@ -13,6 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.Random;
 
@@ -21,6 +22,7 @@ public class CoinActivity extends AppCompatActivity {
     Button flipButton;
     ImageView coinImg;
     ImageView coinTImg;
+    TextView coinText;
     Random random = new Random();
 
     Boolean heads = true;
@@ -34,6 +36,7 @@ public class CoinActivity extends AppCompatActivity {
         flipButton = findViewById(R.id.pc_flip_button);
         coinImg = findViewById(R.id.pc_coin_img);
         coinTImg = findViewById(R.id.pc_coint_img);
+        coinText = findViewById(R.id.pc_coin);
 
         flipButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +54,9 @@ public class CoinActivity extends AppCompatActivity {
     private void flipCoin() {
         Log.d("TAG", String.valueOf(spins));
         Log.d("TAG", String.valueOf(heads));
+        coinText.setText(R.string.pc_question);
+        flipButton.setEnabled(false);
+        flipButton.setAlpha(0.6F);
 
         Animator anim = AnimatorInflater.loadAnimator(this, R.animator.pc_scale_x_axis);
         Animator animR = AnimatorInflater.loadAnimator(this, R.animator.pc_scale_x_axis_r);
@@ -81,6 +87,19 @@ public class CoinActivity extends AppCompatActivity {
                 public void run() {
                     Log.d("TAG", "flip again");
                     flipCoin();
+                }
+            }, 810);
+        } else {
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    if (heads) {
+                        coinText.setText(R.string.pc_heads);
+                    } else {
+                        coinText.setText(R.string.pc_tails);
+                    }
+                    flipButton.setEnabled(true);
+                    flipButton.setAlpha(1F);
                 }
             }, 810);
         }
