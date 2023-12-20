@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Playcompanion"
         tools:targetApi="31">
         <activity
+            android:name=".HourglassActivity"
+            android:exported="false" />
+        <activity
             android:name=".CoinActivity"
             android:exported="false" />
         <activity
