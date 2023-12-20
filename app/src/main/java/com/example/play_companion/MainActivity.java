@@ -65,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openHourglassActivity(View view) {
+        Intent intent = new Intent(this, HourglassActivity.class);
+        startActivity(intent);
+    }
+
     public void openAccountActivity(View view) {
         Intent intent = new Intent(this, AccountActivity.class);
         startActivity(intent);

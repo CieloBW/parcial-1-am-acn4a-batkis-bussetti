@@ -46,4 +46,9 @@
     <string name="pc_tails">Tails</string>
     <string name="pc_coin_image">coin_image</string>
     <string name="pc_flip">Flip</string>
+    <string name="pc_zero_s">0s</string>
+    <string name="pc_hourglass_image">hourglass_image</string>
+    <string name="pc_start">Start</string>
+    <string name="pc_ten">10</string>
+    <string name="pc_seconds">Seconds</string>
 </resources>
